@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Virtual environment
+venv/
+.env/
+.env.*  # If you use multiple .env files (e.g., .env.dev)
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Byte-compiled / cache
+*.pyc
+*.pyo
+*.pyd
+*.pycache/
+
+# Testing
+htmlcov/
+.tox/
+.nox/
+coverage.*
+.cache
+pytest_cache/
+
+# FastAPI with Uvicorn log files
+*.db
+*.sqlite3
+
+# Mypy / type checking
+.mypy_cache/
+.dmypy.json
+
+# Linting
+.pylint.d/
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Jupyter
+.ipynb_checkpoints
+
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
+MANIFEST
+
+# If using poetry
+poetry.lock
