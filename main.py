@@ -8,8 +8,7 @@ app = FastAPI()
 tasks: list[Task] = []
 task_id_counter = 1
 origins = [
-    "http://localhost:5173",
-    "https://task-management-web-snowy.vercel.app"
+    "*"
 ]
 
 app.add_middleware(
