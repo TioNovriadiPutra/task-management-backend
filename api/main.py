@@ -32,7 +32,7 @@ def get_tasks():
 @app.post("/tasks")
 def create_task(task: TaskCreate):
     global task_id_counter
-    new_task = Task(id=task_id_counter, title=task.title, description=task.description, status=False)
+    new_task = Task(id=task_id_counter, title=task.title, startDate=task.startDate, endDate=task.endDate, description=task.description, pic=task.pic, status=False)
     task_id_counter += 1
     tasks.append(new_task)
     return JSONResponse(status_code=201, content={
@@ -49,6 +49,9 @@ def update_task_status(task_id: int):
                 id=task.id,
                 title=task.title,
                 description=task.description,
+                startDate=task.startDate,
+                endDate=task.endDate,
+                pic=task.pic,
                 status=True
             )
             tasks[i] = updated_task
